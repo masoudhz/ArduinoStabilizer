@@ -90,10 +90,10 @@ void loop() {
     txAil = ch1;
     break;
   case 1:
-    txAil = gyro2();
+    txAil = gyro1();
     break;
   case 2:
-    //txAil = gyro1();
+    txAil = gyro2();
     break;
 }
   
@@ -136,9 +136,11 @@ int gyro2(){
   while(GyX != 0){
     if(GyX > 0){
       txAil = 1200;
+      break;
     }
     else if(GyX < 0){
       txAil = 1750;
+      break;
     }
     else{
       break;
